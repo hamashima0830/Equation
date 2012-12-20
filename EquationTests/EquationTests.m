@@ -151,4 +151,15 @@ Equation* e;
     STAssertEqualsWithAccuracy(0.0, [e imaginary1], 0.00001, @"imaginary1 error");
     STAssertEqualsWithAccuracy(0.0, [e imaginary2], 0.00001, @"imaginary2 error");
 }
+
+//実数解二つ
+-(void)test7
+{
+    e=[[Equation alloc] initWithA:1 b:4 c:3];
+    
+    STAssertEqualsWithAccuracy(-3.0, [e real1], 0.00001, @"real1 error");
+    STAssertEqualsWithAccuracy(-1.0, [e real2], 0.00001, @"real2 error");
+    STAssertEqualsWithAccuracy(0.0, [e imaginary1], 0.00001, @"imaginary1 error");
+    STAssertEqualsWithAccuracy(0.0, [e imaginary2], 0.00001, @"imaginary2 error");
+}
 @end
